@@ -1,5 +1,12 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 $grey: #989898;
+.wrapper{
+    padding: 0px;
+}
+body{
+    font-size: 18px;
+    font-weight: 300;
+}
 #wrapper-navbar {
     #main-nav{
         padding: 0;
@@ -255,6 +262,9 @@ $grey: #989898;
 
 .home-experience{
     overflow: hidden;
+    margin-bottom: -400px;
+    position: relative;
+    z-index: 200;
     .info-holder{
         background: $primary; 
         padding: 100px;
@@ -337,11 +347,21 @@ $grey: #989898;
         }
     }
 }
+
 .home-view-our-range{
-    padding-top: 100px;
+    padding-top: calc(100px + 400px);
     padding-bottom: calc(100px + 150px);
     background-image: url(../img/home-view-our-range-background.png);
     background-size: cover;
+    position: relative;
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom:0;left:0;right:0;
+        height: 400px;
+        background: linear-gradient(to bottom, rgba(white, 1), rgba(white, 0));
+    }
     .circle{
         padding-top: 100%;
         border-radius: 50%;
@@ -412,17 +432,103 @@ $grey: #989898;
         font-size: 18px;
         height: 66px;
         width: 100%;
-        border-radius: 66px;
+        border-radius: 33px;
         background: white;
         border: 0px;
         padding: 30px;
         outline: none;
-        &.[type="submit"]{
+        &[type="submit"]{
             padding: 0px;
             background: $primary;
             color: white;
         }
     }
+}
+
+.home-case-studies{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: -200px;
+    overflow: hidden;
+    h2{
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 75px;
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -32.5px;
+            left: -33vw;
+            right:-50vw;
+            border-bottom: 2px dotted $grey;
+        }
+    }
+    .tagline{
+        font-size: 24px;
+        strong{
+            font-weight: bold;
+            color:$primary;
+        }
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+    .circle{
+        padding-top: 100%;
+        border-radius: 50%;
+        background: #F5F5F5;
+        margin-bottom: 30px;
+        position: relative;
+        .image{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            border-radius: 50%;
+            background-image: url(../img/home-experience-circle-1.png);
+            background-size: cover;
+        }
+    }
+    .buttons{
+        display: flex;
+        .button {
+            background: $primary;
+            color: white;
+            font-size: 18px;
+            border-radius: 1.5em;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            margin-top: 10px;
+            justify-content: space-between;
+            transition: ease 0.25s all;
+            margin-bottom: 15px;
+            .fa{
+                margin-left: 30px;
+            }
+            &:hover {
+                text-decoration: none;
+                background: $grey;
+                color: white;
+                
+            }
+            &.alt{
+                flex:1;
+                background: white;
+                color: $primary;
+                border: 1px solid $primary;
+
+            }
+        }
+    }
+    
 }
 
 .home-newsletter-background{
@@ -438,4 +544,76 @@ $grey: #989898;
         height: 560px;
         background: linear-gradient(to top, rgba(white, 1), rgba(white, 0));
     }
+}
+#wrapper-footer{
+    overflow: hidden;
+    .info-holder{
+        background: $primary; 
+        padding: 100px;
+        position: relative;
+        border-top-right-radius: 50px;
+        color: white;
+        &:after{
+            position: absolute;
+            content: "";
+            display: block;
+            right: 100%;
+            top: 0;
+            bottom: 0;
+            width: 100vw;
+            background: $primary;
+        }
+        h2{
+            font-size: 72px;
+            font-weight: bold;
+            color: black;
+        }
+        .quote{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .button {
+            background: black;
+            color: white;
+            font-size: 24px;
+            border-radius: 1.5em;
+            padding: 12px 20px;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+            margin-top: 10px;
+            justify-content: space-between;
+            transition: ease 0.25s all;
+            .fa{
+                margin-left: 30px;
+            }
+            &:hover {
+                text-decoration: none;
+                background: $grey;
+                color: white;
+                
+            }
+        }
+        input,
+        textarea{
+            font-size: 18px;
+            height: 66px;
+            width: 100%;
+            border-radius: 33px;
+            background: white;
+            border: 0px;
+            padding: 30px;
+            outline: none;
+            margin-bottom: 10px;
+            
+            &[type="submit"]{
+                padding: 0px;
+                background: black;
+                color: white;
+            }
+        }
+        textarea{
+            height: auto;
+        }
+    }  
 }

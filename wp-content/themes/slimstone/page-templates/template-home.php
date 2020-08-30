@@ -101,5 +101,27 @@ get_header();
         </div>
     </div>
 </div>
+<div class="home-case-studies">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2>Kitchen Installation and Renovation, Bunbury</h2>
+                <div class="tagline">
+                    <strong>Case Studies:</strong> 3 Feb 2020
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel repudiandae ipsam accusantium animi. Qui, excepturi rem nisi itaque atque dolorem. Est ut laboriosam mollitia officiis alias, vitae nam quaerat nobis?</p>
+                <div class="buttons">
+                    <a href="#" class="button">Read More<i class="fa fa-chevron-right"></i></a>
+                    <a href="#" class="button alt">See all Case Studies<i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="circle">
+                    <div class="image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php
 get_footer();
