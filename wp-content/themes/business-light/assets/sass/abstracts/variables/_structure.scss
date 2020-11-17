@@ -1,0 +1,74 @@
+$size__site-main: 100%;
+$size__site-sidebar: 29%;
+
+// Banner Header
+.page-header {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 80.5px 0;
+    margin-bottom: 30px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.3;
+    }
+   .container {
+        position: relative;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px !important;
+        margin-right: auto;
+        margin-left: auto;
+        h2 {
+            margin: 0;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 1.2;
+            @media (min-width: 1220px){
+                font-size: 60px;
+            }
+        }
+
+        .thm-breadcrumb {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            li {
+                display: flex;
+                align-items: baseline;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+                a, span {
+                    color: inherit;
+                    transition: all 500ms ease;
+                    text-align: left;
+                }
+                a:hover{
+                    color: $color__link-hover;
+                }
+                i{
+                    margin-right: 10px;
+                }
+            }
+            li+li::before {
+                content: '/';
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+
+    }
+}

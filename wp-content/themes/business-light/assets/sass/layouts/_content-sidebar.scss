@@ -1,0 +1,30 @@
+.right-sidebar{
+	.site-row {
+		display: grid;
+		grid-template-columns: auto ($size__site-sidebar);
+		grid-template-areas:
+			"main sidebar";
+		grid-gap: 2em;
+		align-items: flex-start;
+		@media (max-width: 992px){
+			grid-template-columns: 100%;
+			grid-template-areas:
+				"main"
+				"sidebar";
+			grid-gap: 4.5em;
+		}
+	}
+
+}
+
+
+.site-main {
+	grid-area: main;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+	grid-area: sidebar;
+}
+
+@import "no-sidebar";

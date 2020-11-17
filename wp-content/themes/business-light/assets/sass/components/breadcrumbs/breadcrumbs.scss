@@ -1,0 +1,31 @@
+.trail-items{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        &::marker{
+            display: none;
+        }
+        a{
+            color: inherit;
+            transition: all 500ms ease;
+            text-align: left;
+            &:hover{
+                color:$color__link-hover;
+            }
+        }
+        
+    }
+    li+li::before {
+        content: '/';
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}

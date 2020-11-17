@@ -1,0 +1,8 @@
+.no-sidebar{
+	.site-row {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-areas:
+        	"main";
+	}
+}

@@ -1,0 +1,48 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.primary-btn,
+.wp-block-button__link {
+	border: none;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: white !important;
+	line-height: 1;
+	// padding: 0.6em 1em 0.4em;
+	padding: 1rem 1.5rem;
+	cursor: pointer;
+	outline: none;
+	font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s linear;
+	&:hover {
+		background: $color__background-button-hover;
+		color: $color_main !important;
+	}
+
+	&:active,
+	&:focus {
+		background: $color__background-button-hover;
+	}
+	&:focus-within{
+		outline: $secondary dashed 2px;
+	}
+}
+
+.outline-btn{
+	background: transparent !important;
+	border: 1.5px solid  $color__background-button;
+	font-weight: 500;
+	color: $color_main !important;
+	&:hover {
+		background: $color__background-button !important;
+		color: #fff !important;
+	}
+	&:focus-within{
+		outline: $secondary dashed 2px;
+	}
+
+}
